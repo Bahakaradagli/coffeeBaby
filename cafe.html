@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kafe Detay</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="cafeInfo"></div>
+  <div id="drinksList"></div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const kafeId = urlParams.get('kafeId');
+
+    fetch('cafes.json')
+      .then(res => res.json())
+      .then(data => {
+        const cafe = data.cafes.find(c => c.id === kafeId);
+
+        if (!cafe) {
+          document.body.innerHTML = "<h2>Kafe bulunamadı</h2>";
+          return;
+        }
+
+        document.getElementById('cafeInfo').innerHTML = `
+          <h1>${cafe.name}</h1>
+          <h3>${cafe.location}</h3>
+          <hr />
+        `;
+
+        const list = document.getElementById('drinksList');
+        cafe.drinks.forEach(drink => {
+          list.innerHTML += `
+            <div style="margin-bottom:20px">
+              <h2>${drink.name}</h2>
+              <img src="${drink.image}" width="200" />
+              <p>${drink.description}</p>
+            </div>
+          `;
+        });
+      });
+  </script>
+</body>
+</html>

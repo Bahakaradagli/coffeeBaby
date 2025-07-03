@@ -3,20 +3,32 @@
     {
       "id": "coffeeBaby",
       "name": "Coffee Baby",
-      "locations": [
+      "location": "Kadıköy",
+      "drinks": [
         {
-          "id": "kafe1",
-          "name": "Coffee Baby Kadıköy",
-          "image": "/assets/kadikoy.jpg",
-          "drinks": [
-            {
-              "id": "americano",
-              "name": "Americano",
-              "image": "/assets/americano.jpg",
-              "description": "Yoğun, sert, klasik Amerikan kahvesi.",
-              "likes": 142
-            }
-          ]
+          "id": "americano",
+          "name": "Americano",
+          "image": "assets/americano.jpg",
+          "description": "Yoğun ve sade bir kahve."
+        },
+        {
+          "id": "latte",
+          "name": "Latte",
+          "image": "assets/latte.jpg",
+          "description": "Sütlü ve yumuşak içimli kahve."
+        }
+      ]
+    },
+    {
+      "id": "dreamCoffee",
+      "name": "Dream Coffee",
+      "location": "Beşiktaş",
+      "drinks": [
+        {
+          "id": "mocha",
+          "name": "Mocha",
+          "image": "assets/mocha.jpg",
+          "description": "Çikolatalı kahve."
         }
       ]
     }

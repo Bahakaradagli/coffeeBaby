@@ -1,0 +1,64 @@
+/* Sayfa genel yapısı */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Orta kutu */
+.center {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Logo benzeri başlık */
+.center h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #202124;
+}
+
+/* Arama kutusu */
+#searchInput {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 18px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#searchInput:focus {
+  box-shadow: 0 1px 8px rgba(32,33,36,0.4);
+}
+
+/* Arama butonu */
+button {
+  margin-top: 24px;
+  padding: 10px 24px;
+  font-size: 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #e8eaed;
+}
+
+/* Hata mesajı */
+#notFound {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #d93025;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kafe Arama</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="center">
+    <h1>Kafe Arama</h1>
+    <input type="text" id="searchInput" placeholder="Kafe adı yaz..." />
+    <button onclick="searchCafe()">Ara</button>
+    <p id="notFound" style="color:red;"></p>
+  </div>
+
+  <script>
+    async function searchCafe() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const res = await fetch('cafes.json');
+      const data = await res.json();
+
+      const found = data.cafes.find(cafe =>
+        cafe.name.toLowerCase().includes(query)
+      );
+
+      if (found) {
+        window.location.href = `cafe.html?kafeId=${found.id}`;
+      } else {
+        document.getElementById('notFound').innerText = "Kafe bulunamadı.";
+      }
+    }
+  </script>
+</body>
+</html>

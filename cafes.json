@@ -1,0 +1,24 @@
+{
+  "cafes": [
+    {
+      "id": "coffeeBaby",
+      "name": "Coffee Baby",
+      "locations": [
+        {
+          "id": "kafe1",
+          "name": "Coffee Baby Kadıköy",
+          "image": "/assets/kadikoy.jpg",
+          "drinks": [
+            {
+              "id": "americano",
+              "name": "Americano",
+              "image": "/assets/americano.jpg",
+              "description": "Yoğun, sert, klasik Amerikan kahvesi.",
+              "likes": 142
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
